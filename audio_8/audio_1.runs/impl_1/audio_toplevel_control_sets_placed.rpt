@@ -1,0 +1,116 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Dec  6 16:23:29 2023
+| Host         : LAPTOP-7O16QNKC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file audio_toplevel_control_sets_placed.rpt
+| Design       : audio_toplevel
+| Device       : xc7s50
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    38 |
+|    Minimum number of control sets                        |    38 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   124 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    38 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    19 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             559 |          166 |
+| No           | No                    | Yes                    |              97 |           56 |
+| No           | Yes                   | No                     |             212 |           67 |
+| Yes          | No                    | No                     |              96 |           32 |
+| Yes          | No                    | Yes                    |             195 |           65 |
+| Yes          | Yes                   | No                     |              85 |           24 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+---------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|              Clock Signal             |                                                 Enable Signal                                                 |                                   Set/Reset Signal                                   | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------+---------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  downsampling_rate_reg[1]_i_2_n_0     |                                                                                                               | downsampling_rate_reg[1]_i_3_n_0                                                     |                1 |              1 |         1.00 |
+|  downsampling_rate_reg[0]_i_2_n_0     |                                                                                                               | downsampling_rate_reg[0]_i_3_n_0                                                     |                1 |              1 |         1.00 |
+|  pcm_clk_BUFG                         |                                                                                                               | audio_in_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d2    |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                        |                                                                                                               | audio_store_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d2 |                2 |              2 |         1.00 |
+|  clk_slice_para_reg[18]_i_2_n_0       |                                                                                                               |                                                                                      |                1 |              3 |         3.00 |
+|  vsync                                | nolabel_line62/ani/count_star[3]_i_1_n_0                                                                      |                                                                                      |                1 |              4 |         4.00 |
+|  vsync                                |                                                                                                               | nolabel_line62/ani/red239_in                                                         |                2 |              4 |         2.00 |
+|  pcm_clk_BUFG                         | audio_store_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i_reg_0 |                                                                                      |                4 |              5 |         1.25 |
+|  pcm_clk_BUFG                         | downsampling/din_valid_r2                                                                                     | downsampling/din_valid_cnt[2]                                                        |                1 |              5 |         5.00 |
+|  vsync                                | pet_IBUF                                                                                                      |                                                                                      |                2 |              6 |         3.00 |
+|  vsync                                | nolabel_line62/ani/count_poke[5]_i_1_n_0                                                                      |                                                                                      |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                        | audio_in_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0]                    | led_reset_OBUF                                                                       |                3 |              8 |         2.67 |
+|  pcm_clk_BUFG                         | downsampling/din_valid_cnt1_carry_n_2                                                                         | led_reset_OBUF                                                                       |                3 |              8 |         2.67 |
+|  vsync                                | nolabel_line62/ani/sel                                                                                        | nolabel_line62/ani/count_loss                                                        |                2 |              8 |         4.00 |
+|  vsync                                |                                                                                                               |                                                                                      |                3 |              9 |         3.00 |
+|  nolabel_line62/clk_wiz/inst/clk_out1 | nolabel_line62/vga/vc                                                                                         | led_reset_OBUF                                                                       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                        | nolabel_line62/ani/red[3]_i_1_n_0                                                                             |                                                                                      |                7 |             12 |         1.71 |
+|  pcm_clk_BUFG                         | audio_in_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]                    | led_reset_OBUF                                                                       |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG                        | fir/U0/i_synth/g_single_rate.i_single_rate/base_en_cntrl                                                      |                                                                                      |                3 |             15 |         5.00 |
+|  clk_IBUF_BUFG                        | fir/U0/i_synth/g_single_rate.i_single_rate/g_s_data_chan_fifo.i_s_data_chan_fifo/wr_enable                    |                                                                                      |                2 |             16 |         8.00 |
+|  pcm_clk_BUFG                         | data_from_fifo[15]_i_2_n_0                                                                                    | data_from_fifo[15]_i_1_n_0                                                           |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                        | fir/U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.i_latch_op/latch_op                       |                                                                                      |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                        | fir/U0/i_synth/g_single_rate.i_single_rate/rfd_int                                                            |                                                                                      |                2 |             16 |         8.00 |
+|  clk_IBUF_BUFG                        | fir/U0/i_synth/g_single_rate.i_single_rate/we_gen_cntrl                                                       |                                                                                      |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                        | fir/U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay/CNTRL_IN[0]    |                                                                                      |                5 |             16 |         3.20 |
+|  pcm_clk_BUFG                         |                                                                                                               | led_reset_OBUF                                                                       |               12 |             20 |         1.67 |
+|  pcm_clk_BUFG                         | time_strentch/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_rd_en               | led_reset_OBUF                                                                       |                5 |             24 |         4.80 |
+|  pcm_clk_BUFG                         | time_strentch/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                    | led_reset_OBUF                                                                       |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG                        |                                                                                                               | led_reset_OBUF                                                                       |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                        | fir/U0/i_synth/g_single_rate.i_single_rate/p_0_in                                                             |                                                                                      |                2 |             32 |        16.00 |
+|  nolabel_line62/clk_wiz/inst/clk_out1 |                                                                                                               | led_reset_OBUF                                                                       |               30 |             41 |         1.37 |
+|  nolabel_line62/clk_wiz/inst/clk_out1 |                                                                                                               | nolabel_line62/vga_to_hdmi/inst/encr/AR[0]                                           |               18 |             42 |         2.33 |
+|  pcm_clk_BUFG                         | audio_store_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_rd_en            | led_reset_OBUF                                                                       |               21 |             74 |         3.52 |
+|  clk_IBUF_BUFG                        | audio_store_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_wr_en            | led_reset_OBUF                                                                       |               35 |             91 |         2.60 |
+|  pcm_clk_BUFG                         |                                                                                                               |                                                                                      |               34 |            108 |         3.18 |
+|  mic_clk_OBUF_BUFG                    |                                                                                                               | led_reset_OBUF                                                                       |               49 |            171 |         3.49 |
+|  clk_IBUF_BUFG                        |                                                                                                               |                                                                                      |               52 |            188 |         3.62 |
+|  nolabel_line62/clk_wiz/inst/clk_out1 |                                                                                                               |                                                                                      |               79 |            275 |         3.48 |
++---------------------------------------+---------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

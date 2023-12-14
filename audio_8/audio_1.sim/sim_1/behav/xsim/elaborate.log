@@ -1,0 +1,81 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_7 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_18 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'down_sampling_dout' [C:/Users/user/Desktop/fall2023/ece385/audio_6/audio_1.srcs/sources_1/new/audio_toplevel.sv:86]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'din' [C:/Users/user/Desktop/fall2023/ece385/audio_6/audio_1.srcs/sources_1/new/audio_toplevel.sv:109]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package fir_compiler_v7_2_18.fir_compiler_v7_2_18_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_18.globals_pkg
+Compiling package fir_compiler_v7_2_18.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.diff_clk
+Compiling module xil_defaultlib.pdm_demodulator
+Compiling module xil_defaultlib.downSampling
+Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_sync_stag...
+Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_bhv_ver_a...
+Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_CONV_VER(...
+Compiling module fifo_generator_v13_2_7.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module xil_defaultlib.fifo_generator_1
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.sp_mem [\sp_mem(c_xdevicefamily="spartan...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.filt_mem [\filt_mem(c_xdevicefamily="spart...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.sp_mem [\sp_mem(c_xdevicefamily="spartan...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.filt_mem [\filt_mem(c_xdevicefamily="spart...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.buff [\buff(c_xdevicefamily="spartan7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.calc [\calc(c_xdevicefamily="spartan7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.addsub_mult_accum [\addsub_mult_accum(c_xdevicefami...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.single_rate [\single_rate(c_xdevicefamily="sp...]
+Compiling architecture synth of entity fir_compiler_v7_2_18.fir_compiler_v7_2_18_viv [\fir_compiler_v7_2_18_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_18.fir_compiler_v7_2_18 [\fir_compiler_v7_2_18(c_xdevicef...]
+Compiling architecture fir_compiler_1_arch of entity xil_defaultlib.fir_compiler_1 [fir_compiler_1_default]
+Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_sync_stag...
+Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_bhv_ver_a...
+Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_CONV_VER(...
+Compiling module fifo_generator_v13_2_7.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_bhv_ver_s...
+Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_CONV_VER(...
+Compiling module fifo_generator_v13_2_7.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.fifo_buffer
+Compiling module xil_defaultlib.pdm_modulator
+Compiling module xil_defaultlib.audio_toplevel
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav

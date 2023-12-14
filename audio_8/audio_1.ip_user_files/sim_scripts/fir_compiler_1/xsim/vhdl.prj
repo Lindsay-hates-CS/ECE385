@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../audio_1.gen/sources_1/ip/fir_compiler_1/sim/fir_compiler_1.vhd" \
+
+nosort
